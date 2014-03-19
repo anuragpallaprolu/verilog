@@ -1,0 +1,246 @@
+$date
+	Mon Feb 17 21:08:32 2014
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbed $end
+$scope module test $end
+$var wire 1 ! cout $end
+$var wire 4 " result [3:0] $end
+$var reg 1 # cin $end
+$var reg 2 $ op [1:0] $end
+$var reg 4 % x [3:0] $end
+$var reg 4 & y [3:0] $end
+$scope module a0 $end
+$var wire 4 ' a [3:0] $end
+$var wire 4 ( b [3:0] $end
+$var wire 1 ) cin $end
+$var wire 1 ! cout $end
+$var wire 2 * op [1:0] $end
+$var wire 4 + res [3:0] $end
+$var wire 1 , w0 $end
+$var wire 1 - w1 $end
+$var wire 1 . w2 $end
+$scope module b0 $end
+$var wire 1 ) carryin $end
+$var wire 1 , carryout $end
+$var wire 2 / control [1:0] $end
+$var wire 1 0 in $end
+$var wire 1 1 in1 $end
+$var wire 1 2 in2 $end
+$var wire 1 3 result $end
+$var wire 1 4 w0 $end
+$var wire 1 5 w1 $end
+$var wire 1 6 w2 $end
+$scope module f0 $end
+$var wire 1 1 a $end
+$var wire 1 2 b $end
+$var wire 1 , cin $end
+$var wire 1 , cout $end
+$var wire 1 6 sum $end
+$upscope $end
+$scope module m0 $end
+$var wire 1 4 in1 $end
+$var wire 1 5 in2 $end
+$var wire 1 6 in3 $end
+$var wire 2 7 select [1:0] $end
+$var reg 1 8 out $end
+$upscope $end
+$upscope $end
+$scope module b1 $end
+$var wire 1 , carryin $end
+$var wire 1 - carryout $end
+$var wire 2 9 control [1:0] $end
+$var wire 1 : in $end
+$var wire 1 ; in1 $end
+$var wire 1 < in2 $end
+$var wire 1 = result $end
+$var wire 1 > w0 $end
+$var wire 1 ? w1 $end
+$var wire 1 @ w2 $end
+$scope module f0 $end
+$var wire 1 ; a $end
+$var wire 1 < b $end
+$var wire 1 - cin $end
+$var wire 1 - cout $end
+$var wire 1 @ sum $end
+$upscope $end
+$scope module m0 $end
+$var wire 1 > in1 $end
+$var wire 1 ? in2 $end
+$var wire 1 @ in3 $end
+$var wire 2 A select [1:0] $end
+$var reg 1 B out $end
+$upscope $end
+$upscope $end
+$scope module b2 $end
+$var wire 1 - carryin $end
+$var wire 1 . carryout $end
+$var wire 2 C control [1:0] $end
+$var wire 1 D in $end
+$var wire 1 E in1 $end
+$var wire 1 F in2 $end
+$var wire 1 G result $end
+$var wire 1 H w0 $end
+$var wire 1 I w1 $end
+$var wire 1 J w2 $end
+$scope module f0 $end
+$var wire 1 E a $end
+$var wire 1 F b $end
+$var wire 1 . cin $end
+$var wire 1 . cout $end
+$var wire 1 J sum $end
+$upscope $end
+$scope module m0 $end
+$var wire 1 H in1 $end
+$var wire 1 I in2 $end
+$var wire 1 J in3 $end
+$var wire 2 K select [1:0] $end
+$var reg 1 L out $end
+$upscope $end
+$upscope $end
+$scope module b3 $end
+$var wire 1 . carryin $end
+$var wire 1 ! carryout $end
+$var wire 2 M control [1:0] $end
+$var wire 1 N in $end
+$var wire 1 O in1 $end
+$var wire 1 P in2 $end
+$var wire 1 Q result $end
+$var wire 1 R w0 $end
+$var wire 1 S w1 $end
+$var wire 1 T w2 $end
+$scope module f0 $end
+$var wire 1 O a $end
+$var wire 1 P b $end
+$var wire 1 ! cin $end
+$var wire 1 ! cout $end
+$var wire 1 T sum $end
+$upscope $end
+$scope module m0 $end
+$var wire 1 R in1 $end
+$var wire 1 S in2 $end
+$var wire 1 T in3 $end
+$var wire 2 U select [1:0] $end
+$var reg 1 V out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+xV
+bx U
+xT
+xS
+0R
+xQ
+0P
+1O
+zN
+bx M
+xL
+bx K
+0J
+xI
+0H
+xG
+0F
+0E
+zD
+bx C
+xB
+bx A
+x@
+1?
+0>
+x=
+1<
+0;
+z:
+bx 9
+x8
+bx 7
+x6
+15
+14
+x3
+12
+11
+z0
+bx /
+0.
+x-
+x,
+bx +
+bx *
+x)
+b11 (
+b1001 '
+b11 &
+b1001 %
+bx $
+x#
+bx "
+x!
+$end
+#10
+0V
+0Q
+0L
+0G
+0B
+0=
+18
+13
+b1 "
+b1 +
+b0 $
+b0 *
+b0 /
+b0 7
+b0 9
+b0 A
+b0 C
+b0 K
+b0 M
+b0 U
+0#
+0)
+#30
+xV
+xQ
+xB
+x=
+x8
+x3
+bx0xx "
+bx0xx +
+b10 *
+b10 /
+b10 7
+b10 9
+b10 A
+b10 C
+b10 K
+b10 M
+b10 U
+b10 $
+#60
+b11 $
+b11 *
+b11 /
+b11 7
+b11 9
+b11 A
+b11 C
+b11 K
+b11 M
+b11 U
+#100
