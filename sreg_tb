@@ -1,0 +1,128 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.5 " "(v0_9_5)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x19f6330 .scope module, "sreg_tb" "sreg_tb" 2 1;
+ .timescale 0 0;
+v0x1a30ca0_0 .var "b", 0 0;
+v0x1a30d20_0 .var "clock", 0 0;
+v0x1a30da0_0 .net "q", 0 0, v0x1a2f8a0_0; 1 drivers
+v0x1a30e70_0 .net "q_0", 0 0, v0x1a2f940_0; 1 drivers
+S_0x19f6f30 .scope module, "s0" "sreg" 2 22, 3 14, S_0x19f6330;
+ .timescale 0 0;
+v0x1a30490_0 .net "b", 0 0, v0x1a30ca0_0; 1 drivers
+v0x1a30540_0 .net "clock", 0 0, v0x1a30d20_0; 1 drivers
+v0x1a30650_0 .net "q0_1", 0 0, v0x1a303e0_0; 1 drivers
+v0x1a30700_0 .net "q0_2", 0 0, v0x1a30070_0; 1 drivers
+v0x1a307e0_0 .net "q0_3", 0 0, v0x1a2fd00_0; 1 drivers
+v0x1a30890_0 .alias "q0_4", 0 0, v0x1a30e70_0;
+v0x1a30950_0 .net "q1", 0 0, v0x1a30330_0; 1 drivers
+v0x1a309d0_0 .net "q2", 0 0, v0x1a2fff0_0; 1 drivers
+v0x1a30af0_0 .net "q3", 0 0, v0x1a2fc50_0; 1 drivers
+v0x1a30bc0_0 .alias "q4", 0 0, v0x1a30da0_0;
+S_0x1a30120 .scope module, "ff0" "dff" 3 24, 3 1, S_0x19f6f30;
+ .timescale 0 0;
+v0x1a30210_0 .alias "b", 0 0, v0x1a30490_0;
+v0x1a302b0_0 .alias "clk", 0 0, v0x1a30540_0;
+v0x1a30330_0 .var "q", 0 0;
+v0x1a303e0_0 .var "q_0", 0 0;
+S_0x1a2fdb0 .scope module, "ff1" "dff" 3 25, 3 1, S_0x19f6f30;
+ .timescale 0 0;
+v0x1a2fea0_0 .alias "b", 0 0, v0x1a30950_0;
+v0x1a2ff20_0 .alias "clk", 0 0, v0x1a30540_0;
+v0x1a2fff0_0 .var "q", 0 0;
+v0x1a30070_0 .var "q_0", 0 0;
+S_0x1a2f9f0 .scope module, "ff2" "dff" 3 26, 3 1, S_0x19f6f30;
+ .timescale 0 0;
+v0x1a2fae0_0 .alias "b", 0 0, v0x1a309d0_0;
+v0x1a2fba0_0 .alias "clk", 0 0, v0x1a30540_0;
+v0x1a2fc50_0 .var "q", 0 0;
+v0x1a2fd00_0 .var "q_0", 0 0;
+S_0x1a1b3a0 .scope module, "ff3" "dff" 3 27, 3 1, S_0x19f6f30;
+ .timescale 0 0;
+v0x1a1b490_0 .alias "b", 0 0, v0x1a30af0_0;
+v0x1a2f800_0 .alias "clk", 0 0, v0x1a30540_0;
+v0x1a2f8a0_0 .var "q", 0 0;
+v0x1a2f940_0 .var "q_0", 0 0;
+E_0x19f8a20 .event posedge, v0x1a2f800_0;
+    .scope S_0x1a30120;
+T_0 ;
+    %wait E_0x19f8a20;
+    %load/v 8, v0x1a30210_0, 1;
+    %ix/load 0, 1, 0;
+    %assign/v0 v0x1a30330_0, 0, 8;
+    %load/v 8, v0x1a30210_0, 1;
+    %inv 8, 1;
+    %ix/load 0, 1, 0;
+    %assign/v0 v0x1a303e0_0, 0, 8;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0x1a2fdb0;
+T_1 ;
+    %wait E_0x19f8a20;
+    %load/v 8, v0x1a2fea0_0, 1;
+    %ix/load 0, 1, 0;
+    %assign/v0 v0x1a2fff0_0, 0, 8;
+    %load/v 8, v0x1a2fea0_0, 1;
+    %inv 8, 1;
+    %ix/load 0, 1, 0;
+    %assign/v0 v0x1a30070_0, 0, 8;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_0x1a2f9f0;
+T_2 ;
+    %wait E_0x19f8a20;
+    %load/v 8, v0x1a2fae0_0, 1;
+    %ix/load 0, 1, 0;
+    %assign/v0 v0x1a2fc50_0, 0, 8;
+    %load/v 8, v0x1a2fae0_0, 1;
+    %inv 8, 1;
+    %ix/load 0, 1, 0;
+    %assign/v0 v0x1a2fd00_0, 0, 8;
+    %jmp T_2;
+    .thread T_2;
+    .scope S_0x1a1b3a0;
+T_3 ;
+    %wait E_0x19f8a20;
+    %load/v 8, v0x1a1b490_0, 1;
+    %ix/load 0, 1, 0;
+    %assign/v0 v0x1a2f8a0_0, 0, 8;
+    %load/v 8, v0x1a1b490_0, 1;
+    %inv 8, 1;
+    %ix/load 0, 1, 0;
+    %assign/v0 v0x1a2f940_0, 0, 8;
+    %jmp T_3;
+    .thread T_3;
+    .scope S_0x19f6330;
+T_4 ;
+    %vpi_call 2 7 "$dumpfile", "sreg_tb.vcd";
+    %vpi_call 2 8 "$dumpvars", 2'sb01, S_0x19f6330;
+    %vpi_call 2 9 "$monitor", "clk=%b, d=%b, q=%b, q_0=%b", v0x1a30d20_0, v0x1a30ca0_0, v0x1a30da0_0, v0x1a30e70_0;
+    %set/v v0x1a30d20_0, 0, 1;
+    %set/v v0x1a30ca0_0, 1, 1;
+    %delay 10, 0;
+    %set/v v0x1a30ca0_0, 0, 1;
+    %delay 12, 0;
+    %set/v v0x1a30ca0_0, 1, 1;
+    %delay 18, 0;
+    %set/v v0x1a30ca0_0, 0, 1;
+    %delay 20, 0;
+    %vpi_call 2 15 "$finish";
+    %end;
+    .thread T_4;
+    .scope S_0x19f6330;
+T_5 ;
+    %delay 5, 0;
+    %load/v 8, v0x1a30d20_0, 1;
+    %inv 8, 1;
+    %set/v v0x1a30d20_0, 8, 1;
+    %jmp T_5;
+    .thread T_5;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "sreg_tb.v";
+    "dff_4bitreg.v";

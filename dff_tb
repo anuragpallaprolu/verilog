@@ -1,0 +1,62 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.5 " "(v0_9_5)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x1d043a0 .scope module, "dff_tb" "dff_tb" 2 1;
+ .timescale 0 0;
+v0x1d13e80_0 .var "clock", 0 0;
+v0x1d13f50_0 .var "d", 0 0;
+v0x1d14000_0 .net "q", 0 0, v0x1d13d30_0; 1 drivers
+v0x1d140b0_0 .net "q_0", 0 0, v0x1d13dd0_0; 1 drivers
+S_0x1d04490 .scope module, "d0" "dff" 2 22, 3 1, S_0x1d043a0;
+ .timescale 0 0;
+v0x1d04580_0 .net "b", 0 0, v0x1d13f50_0; 1 drivers
+v0x1d13c90_0 .net "clk", 0 0, v0x1d13e80_0; 1 drivers
+v0x1d13d30_0 .var "q", 0 0;
+v0x1d13dd0_0 .var "q_0", 0 0;
+E_0x1cdf560 .event posedge, v0x1d13c90_0;
+    .scope S_0x1d04490;
+T_0 ;
+    %wait E_0x1cdf560;
+    %load/v 8, v0x1d04580_0, 1;
+    %ix/load 0, 1, 0;
+    %assign/v0 v0x1d13d30_0, 0, 8;
+    %load/v 8, v0x1d04580_0, 1;
+    %inv 8, 1;
+    %ix/load 0, 1, 0;
+    %assign/v0 v0x1d13dd0_0, 0, 8;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0x1d043a0;
+T_1 ;
+    %vpi_call 2 7 "$dumpfile", "dff_tb.vcd";
+    %vpi_call 2 8 "$dumpvars", 2'sb01, S_0x1d043a0;
+    %vpi_call 2 9 "$monitor", "clk=%b, d=%b,q=%b,q_0=%b", v0x1d13e80_0, v0x1d13f50_0, v0x1d14000_0, v0x1d140b0_0;
+    %set/v v0x1d13e80_0, 0, 1;
+    %set/v v0x1d13f50_0, 1, 1;
+    %delay 10, 0;
+    %set/v v0x1d13f50_0, 0, 1;
+    %delay 12, 0;
+    %set/v v0x1d13f50_0, 1, 1;
+    %delay 18, 0;
+    %set/v v0x1d13f50_0, 0, 1;
+    %delay 20, 0;
+    %vpi_call 2 15 "$finish";
+    %end;
+    .thread T_1;
+    .scope S_0x1d043a0;
+T_2 ;
+    %delay 5, 0;
+    %load/v 8, v0x1d13e80_0, 1;
+    %inv 8, 1;
+    %set/v v0x1d13e80_0, 8, 1;
+    %jmp T_2;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "dff_tb.v";
+    "dff.v";

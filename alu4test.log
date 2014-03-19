@@ -1,0 +1,13 @@
+.start
+
+config failed optimization
+check fa module
+check block module
+
+.end
+.start
+
+block config failed
+fatal error in module 'block'
+
+.end
