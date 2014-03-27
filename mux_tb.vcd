@@ -1,0 +1,34 @@
+$date
+	Mon Jan 27 21:54:01 2014
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module mux_tb $end
+$var wire 1 ! q $end
+$var reg 4 " d [3:0] $end
+$var reg 2 # slc [1:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx #
+b10 "
+x!
+$end
+#10
+b1 #
+1!
+#25
+b0 #
+0!
+#70
+b1 #
+1!
+#110
+b0 #
+0!
+#155
