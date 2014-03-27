@@ -1,0 +1,6 @@
+#define BINDIR "/usr/local/bin"
+#define LIBDIR "/usr/local/lib"
+#define INCLUDEDIR "/usr/local/include"
+#define CFLAGS "-g -O2"
+#define LDFLAGS ""
+#define LIBS "-lreadline -lz -lbz2"

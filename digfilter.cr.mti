@@ -1,0 +1,13 @@
+{C:/Users/user/Desktop/Cybernet Corp/NANDtest.v} {1 {vlog -work work -vopt -nocovercells {C:/Users/user/Desktop/Cybernet Corp/NANDtest.v}
+Model Technology ModelSim SE vlog 6.3f Compiler 2008.02 Feb 28 2008
+-- Compiling module increment
+
+Top level modules:
+	increment
+Model Technology ModelSim SE vlog 6.3f Compiler 2008.02 Feb 28 2008
+-- Compiling module increment
+
+Top level modules:
+	increment
+
+} {} {}}

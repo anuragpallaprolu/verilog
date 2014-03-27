@@ -1,0 +1,14 @@
+module kmap(a,b,c,d,eseg); 
+	output eseg; 
+	input a,b,c,d;
+	
+	always @(a,b,c,d) begin	
+		eseg=1;
+		if(~a&d)
+			eseg=0;
+		if(~a&b&~c)
+			eseg=0;
+		if(~b&~c&d)
+			eseg=0;
+	end
+endmodule

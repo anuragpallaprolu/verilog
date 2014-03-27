@@ -1,0 +1,22 @@
+Circuit: * C:\Users\user\Desktop\Cybernet Corp\neural pulse very_close_approx_!_1009.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Tue Sep 17 03:25:53 2013
+Total elapsed time: 0.519 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2401
+traniter = 2387
+tranpoints = 1118
+accept = 1102
+rejected = 16
+matrix size = 15
+fillins = 5
+solver = Normal
+Matrix Compiler1: 984 bytes object code size  2.2/1.5/[0.9]
+Matrix Compiler2: off  [1.2]/2.0/2.3
+
+

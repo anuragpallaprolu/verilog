@@ -1,0 +1,7 @@
+defaultveriuser.o: defaultveriuser.cc ../config.h veriuser.h acc_user.h
+
+../config.h:
+
+veriuser.h:
+
+acc_user.h:
