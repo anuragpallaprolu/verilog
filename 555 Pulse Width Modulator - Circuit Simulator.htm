@@ -1,0 +1,422 @@
+
+<!-- saved from url=(0071)http://www.indiabix.com/electronics-circuits/555-pulse-width-modulator/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>555 Pulse Width Modulator - Circuit Simulator</title>
+    <meta name="keywords" content="555, pulse, width, modulator, 555, timer, chip, electronics, circuit, diagram, explanation, working, principles, online, simulator, design, simulation, tutorials">
+    <meta name="description" content="This is the 555 Pulse Width Modulator circuit diagram with the detailed explanation of its working principles. The electronic circuit simulator helps you to design the 555 Pulse Width Modulator circuit and to simulate it online for better understanding.">
+    <link href="./555 Pulse Width Modulator - Circuit Simulator_files/css-alpha-009-1.css" type="text/css" rel="stylesheet" media="screen">
+       <script async="" src="./555 Pulse Width Modulator - Circuit Simulator_files/v2"></script><script async="" type="text/javascript" src="./555 Pulse Width Modulator - Circuit Simulator_files/tc.js"></script><script async="" type="text/javascript" src="./555 Pulse Width Modulator - Circuit Simulator_files/saved_resource"></script><script src="./555 Pulse Width Modulator - Circuit Simulator_files/saved_resource(1)" async="" type="text/javascript"></script><script src="./555 Pulse Width Modulator - Circuit Simulator_files/js-alpha-009.js" type="text/javascript"></script>  
+       <link href="http://www.indiabix.com/favicon.ico" type="image/x-icon" rel="shortcut icon">   
+    <script type="text/javascript">
+    function LoadElectronicsPage()
+    {
+        try
+        {  var tmpHeading = $("h1#txtHeading").html();
+           if((tmpHeading == null) || (tmpHeading.indexOf('-') == -1)) return;  
+           tmpHeading = tmpHeading.replace('-', '[#]');
+           tmpHeading =  tmpHeading.split('[#]')[0] + ' :: <span class="ib-green">' + tmpHeading.split('[#]')[1] + '</span>';
+           $("h1#txtHeading").html(tmpHeading);
+           
+           if(navigator.javaEnabled())
+           {
+               $('div#divSimulationPanel').show();
+               $('div#divDownloadPanel').hide();
+           }
+           else
+           {
+               $('div#divSimulationPanel').hide();
+               $('div#divDownloadPanel').show();
+           }
+           
+        }catch(Err){}
+    }
+    
+    function StartCircuitSimulation()
+    {
+        $('div#divSimulator').html( $('div#divSimulator').html().replace('<!--', '').replace('//-->', '') ); 
+        $('div#divCircuitDiagram').hide();
+        $('div#divSimulator').show();
+    }
+
+    function SendElectronicsCircuitsDiscussion(pCircuitID)
+    {
+      var intCircuitID      = parseInt(pCircuitID );
+      var txtUserName       = LocalTouchUp( $('input#txtUserName').val()          );
+      var txtEmailID        = LocalTouchUp( $('input#txtEmailID').val()           );
+      var txtDiscussionText = LocalTouchUp( $('textarea#txtDiscussionText').val() );
+      var intIsAlertMe      = $('input#chkAlertMe').attr('checked')? 1 : 0; 
+      var txtPostedURL      = window.location.href;
+      
+      if(txtDiscussionText.length < 5)
+      {
+          alert('Please enter your comments.'); 
+          $('textarea#txtDiscussionText').focus();
+          return false;
+      }
+      
+      if(txtUserName.length < 3)
+      {
+          alert('Please enter your Name.');    
+          $('input#txtUserName').focus();
+          return false;
+      }
+
+      if( txtEmailID.length > 0 )
+      {
+          var filter = /^[a-zA-Z0-9][a-zA-Z0-9_.-]*@(([a-zA-Z0-9-]+.){1,2})([a-zA-Z][a-zA-Z]+)$/;
+          
+          /* Code for validate email id */      
+          if(!filter.test(txtEmailID))
+          {
+              alert('Invalid email-id. Please check your email-id.');    
+              $('input#txtEmailID').focus();
+              return false;
+          }
+      }
+
+      if( (intIsAlertMe == 1) && (txtEmailID.length < 1) )
+      {
+          alert('Please enter your email-id if you want receive alert mail when new comments are posted.');
+          $('input#txtEmailID').focus();
+          return false;
+      }
+      
+      if( !(intCircuitID > 0)  )
+      {
+          alert('Invalid Circuit.' + intCircuitID);    
+          return false;
+      }
+     
+      var _paramData =  "CircuitID="        + intCircuitID      + 
+                        "&UserName="        + txtUserName       +
+                        "&EmailID="         + txtEmailID        +
+                        "&DiscussionText="  + txtDiscussionText +
+                        "&IsReceiveAlert="  + intIsAlertMe      +
+                        "&PostedURL="       + txtPostedURL      ; 
+                        
+      $('textarea#txtDiscussionText').attr('readonly', true);
+      $('input#txtUserName').attr('disabled', 'disabled');  
+      $('input#txtEmailID').attr('disabled', 'disabled');  
+      $('input#chkAlertMe').attr('disabled', 'disabled'); 
+      $('input#btnPostComment').attr('disabled', 'disabled');
+      $('input#btnPostComment').val('Please wait...');
+      
+      $.ajax({
+            type: "POST",
+            url: "/_ajax/add-electronics-circuits-discussion.php",
+            data: _paramData,
+            cache: false,
+            success:    function(msg)
+            { 
+                $('input#btnPostComment').replaceWith($.trim(msg));
+            }
+      });
+      
+    }
+    </script>
+<script async="" src="./555 Pulse Width Modulator - Circuit Simulator_files/small.js"></script></head>
+
+<body>
+<!--Ends: DIV = ib-page-wrap-->
+<div id="ib-page-wrap" style="width: 950px">
+
+<!--Starts: Logo Header -->
+
+        <table id="ib-tbl-header" width="100%" cellpadding="0" cellspacing="0" border="0" style="padding-bottom:2px;"><tbody><tr>
+        <td width="10%" align="left"><a href="http://www.indiabix.com/"><img src="./555 Pulse Width Modulator - Circuit Simulator_files/logo.gif" alt="IndiaBIX.com"></a></td>
+        <td align="right" valign="middle">
+            <div id="divTopShare" style="padding-right:20px;"><p align="center" style="font-family:Tahoma,Verdana; font-size:12px; font-weight:bold; color:#5eac1a;">New:
+        <a style="font-family:Tahoma,Verdana; font-size:12px; font-weight:bold;" href="http://www.indiabix.com/electronics-and-communication-engineering/questions-and-answers/">Electronics and Communication Engineering Questions</a> !
+        </p></div>
+        </td>
+        <td width="10%" align="right" valign="middle"><div style="margin-top:10px; white-space:nowrap; verticle-aling:top;">
+<form method="get" name="searchform" action="http://www.google.co.in/search" target="_blank" style="margin: 0px; padding: 0px"> 
+<input type="hidden" name="sitesearch" value="www.indiabix.com">
+<div style="white-space:nowrap; verticle-aling:middle; border: 1px solid #bfbdb0; width: 200px; padding-right:2px; height:22px; ">
+<input onfocus="javascript:if(value==&#39;search...&#39;) value=&#39;&#39;;style.color=&#39;Black&#39;;" onblur="javascript:if(value==&#39;&#39;) value=&#39;search...&#39;;style.color=&#39;Gray&#39;;" alt="search" type="text" name="as_q" size="20" value="search..." style="height:22px; padding-left:4px;   border:0px; color:gray;  width: 180px;">
+<img style="cursor:pointer; vertical-align:middle; padding:0px; margin:0px;" src="./555 Pulse Width Modulator - Circuit Simulator_files/search.png" onclick="document.forms[&#39;searchform&#39;].submit();" alt="Search"> 
+</div>
+</form></div></td>
+        </tr></tbody></table>
+        <input id="hdnTitleID" type="hidden" value="16">
+<!--Ends:   Logo Header-->
+
+<!--Starts: Main Menu.-->
+ <div id="divAptitudeSubMenu" class="top-links"> 
+            <a href="http://www.indiabix.com/aptitude/questions-and-answers/">Arithmetic Aptitude</a> 
+            <a href="http://www.indiabix.com/data-interpretation/questions-and-answers/">Data Interpretation</a> 
+       </div>
+       <div id="divReasoningSubMenu" class="top-links"> 
+            <a href="http://www.indiabix.com/logical-reasoning/questions-and-answers/">Logical Reasoning</a> 
+            <a href="http://www.indiabix.com/verbal-reasoning/questions-and-answers/">Verbal Reasoning</a> 
+            <a href="http://www.indiabix.com/non-verbal-reasoning/questions-and-answers/">Non Verbal Reasoning</a> 
+       </div>
+       <div id="divGkSubMenu" class="top-links"> 
+            <a href="http://www.indiabix.com/general-knowledge/questions-and-answers/" title="General Knowledge">General Knowledge</a>
+       </div>
+       <div id="divPuzzlesSubMenu" class="top-links"> 
+            <a href="http://www.indiabix.com/puzzles/sudoku/">Sudoku</a>
+            <a href="http://www.indiabix.com/puzzles/number-puzzles/">Number puzzles</a> 
+            <a href="http://www.indiabix.com/puzzles/missing-letters-puzzles/">Missing letters puzzles</a> 
+            <a href="http://www.indiabix.com/puzzles/logical-puzzles/">Logical puzzles</a> 
+            <a href="http://www.indiabix.com/puzzles/playing-cards-puzzles/">Playing cards puzzles</a> 
+            <a href="http://www.indiabix.com/puzzles/clock-puzzles/">Clock puzzles</a> 
+       </div>
+       <div id="divProgrammingSubMenu" class="top-links"> 
+            <a href="http://www.indiabix.com/c-programming/questions-and-answers/">C Programming</a>
+            <a href="http://www.indiabix.com/cpp-programming/questions-and-answers/">C++ Programming</a>
+            <a href="http://www.indiabix.com/c-sharp-programming/questions-and-answers/">C# Programming</a> 
+            <a href="http://www.indiabix.com/java-programming/questions-and-answers/">Java Programming</a> 
+       </div>
+       <div id="divMedicalSubMenu" class="top-links" style="width:200px"> 
+            <a href="http://www.indiabix.com/microbiology/questions-and-answers/">Microbiology</a>
+            <a href="http://www.indiabix.com/biochemistry/questions-and-answers/">Biochemistry</a>
+            <a href="http://www.indiabix.com/biotechnology/questions-and-answers/">Biotechnology</a> 
+            <a href="http://www.indiabix.com/biochemical-engineering/questions-and-answers/" alt="Biochemical Engineering">Biochemical Engineering</a>
+       </div>
+       <div id="divEngineeringSubMenu" class="top-links" style="width:180px"> 
+            <!-- a href="/data-structure/questions-and-answers/">Data Structure</a //-->
+            <a href="http://www.indiabix.com/electronics-and-communication-engineering/">Electronics and Communication Engineering</a>  
+            <a href="http://www.indiabix.com/civil-engineering/questions-and-answers/">Civil Engineering</a>  
+            <a href="http://www.indiabix.com/mechanical-engineering/questions-and-answers/">Mechanical Engineering</a>  
+            <a href="http://www.indiabix.com/chemical-engineering/questions-and-answers/">Chemical Engineering</a>  
+            <a href="http://www.indiabix.com/networking/questions-and-answers/">Networking</a>
+            <a href="http://www.indiabix.com/database/questions-and-answers/">Database Questions</a>
+            <a href="http://www.indiabix.com/computer-science/questions-and-answers/">Computer Science</a>
+            <a href="http://www.indiabix.com/electronics/questions-and-answers/">Basic Electronics</a>
+            <a href="http://www.indiabix.com/digital-electronics/questions-and-answers/">Digital Electronics</a>
+            <a href="http://www.indiabix.com/electronic-devices/questions-and-answers/">Electronic Devices</a>
+            <a href="http://www.indiabix.com/electronics-circuits/">Circuit Simulation</a>
+            <a href="http://www.indiabix.com/electrical-engineering/questions-and-answers/">Electrical Enigneering</a>
+            <a href="http://www.indiabix.com/engineering-mechanics/questions-and-answers/">Engineering Mechanics</a>
+            <a href="http://www.indiabix.com/technical-drawing/questions-and-answers/">Technical Drawing</a>
+       </div>
+       <div id="divInterviewSubMenu" class="top-links"> 
+            <a href="http://www.indiabix.com/placement-papers/companies/">Placement Papers</a>
+            <a href="http://www.indiabix.com/group-discussion/topics-with-answers/">Group Disucssion</a>
+            <a href="http://www.indiabix.com/hr-interview/questions-and-answers/">HR Interview</a>
+            <a href="http://www.indiabix.com/technical/interview-questions-and-answers/">Technical Interview</a>
+            <a href="http://www.indiabix.com/body-language/gestures/">Body Language</a> 
+       </div>       
+       <div id="divOnlineTestSubMenu" class="top-links"> 
+            <a href="http://www.indiabix.com/online-test/aptitude-test/">Aptitude Test</a> 
+            <a href="http://www.indiabix.com/online-test/verbal-ability-test/">Verbal Ability Test</a> 
+            <a href="http://www.indiabix.com/online-test/verbal-reasoning-test/">Verbal Reasoning Test</a> 
+            <a href="http://www.indiabix.com/online-test/logical-reasoning-test/">Logical Reasoning Test</a>
+            <a href="http://www.indiabix.com/online-test/c-programming-test/">C Programming Test</a> 
+            <a href="http://www.indiabix.com/online-test/java-programming-test/">Java Programming Test</a> 
+            <a href="http://www.indiabix.com/online-test/data-interpretation-test/">Data Interpretation Test</a> 
+            <a href="http://www.indiabix.com/online-test/general-knowledge-test/">General Knowledge Test</a> 
+       </div>
+       <div id="divTechincalSubMenu" class="top-links"> 
+            <a href="http://www.indiabix.com/technical/data-structures/">Data Structures</a> 
+            <a href="http://www.indiabix.com/technical/operating-systems/">Operating Systems</a> 
+            <a href="http://www.indiabix.com/technical/networking/">Networking</a> 
+            
+            <span class="heading">DATABASE</span>
+            <a href="http://www.indiabix.com/technical/dbms-basics/">Database Basics</a> 
+            <a href="http://www.indiabix.com/technical/sql-server-general-questions/">SQL Server Basics</a> 
+            <a href="http://www.indiabix.com/technical/sql-server-common-questions/">SQL Server Advanced</a> 
+            <a href="http://www.indiabix.com/technical/sql-server-2008/">SQL Server 2008</a> 
+            
+            <span class="heading">JAVA</span>
+            <a href="http://www.indiabix.com/technical/core-java/">Core Java</a> 
+            <a href="http://www.indiabix.com/technical/java-basics/">Java Basics</a> 
+            <a href="http://www.indiabix.com/technical/advanced-java/">Advanced Java</a> 
+            
+            <span class="heading">UNIX</span>
+            <a href="http://www.indiabix.com/technical/unix-file-managemnet/">Unix File Management</a> 
+            <a href="http://www.indiabix.com/technical/unix-memory-management/">Unix Memory Management</a> 
+            <a href="http://www.indiabix.com/technical/unix-process-management/">Unix Process Managemnt</a> 
+            
+            <a href="http://www.indiabix.com/technical/c/">C Interview Questions</a>
+            <a href="http://www.indiabix.com/technical/c/the-c-language-basics/">The C Language Basics</a>
+            
+            <a href="http://www.indiabix.com/technical/dotnet/">.NET Interview Questions</a>
+            <a href="http://www.indiabix.com/technical/dotnet/dot-net-framework/">.NET Framework</a>
+            <a href="http://www.indiabix.com/technical/dotnet/ado-dot-net/">ADO.NET</a>
+            <a href="http://www.indiabix.com/technical/dotnet/asp-dot-net/">ASP.NET</a>
+            
+            <a href="http://www.indiabix.com/technical/software-testing/">Software Testing</a>
+       </div><div id="ib-bix-menu" align="left"><ul><li><a href="http://www.indiabix.com/">Home</a></li><li><a href="http://www.indiabix.com/aptitude/questions-and-answers/" name="divAptitudeSubMenu">Aptitude</a></li><li><a href="http://www.indiabix.com/logical-reasoning/questions-and-answers/" name="divReasoningSubMenu">Logical Reasoning</a></li><li><a href="http://www.indiabix.com/verbal-ability/questions-and-answers/">Verbal Ability</a></li><li><a href="http://www.indiabix.com/general-knowledge/questions-and-answers/" title="General Knowldege" alt="General Knowledge">&nbsp; GK &nbsp;</a></li><li><a href="http://www.indiabix.com/puzzles/number-puzzles/" name="divPuzzlesSubMenu">Puzzles</a></li><li><a href="http://www.indiabix.com/engineering/" name="divEngineeringSubMenu">Engineering</a></li><li><a href="http://www.indiabix.com/interview/" name="divInterviewSubMenu">Interview</a></li><li><a href="http://www.indiabix.com/online-test/categories/" name="divOnlineTestSubMenu">Online Test</a></li></ul></div>
+<!--Ends:   Main Menu.-->
+
+ <!--Main Table Ends-->   
+<table id="ib-tbl-maincontent" cellpadding="0" cellspacing="0" border="0">
+<tbody><tr>
+<td style="padding-right:1%" valign="top" align="left">   
+    <table cellspacing="0" cellpadding="0" width="100%" border="0">
+    <tbody><tr>
+       <td style="background-image:url(&#39;/_files/images/website/bg-top-footer.gif&#39;); background-color:transparent; background-repeat:repeat-x;">
+            <h1 id="txtHeading">Circuit Simulator  :: <span class="ib-green"> 555 Pulse Width Modulator</span></h1>
+            <div id="divIntroduction" style="display:none">
+                <h2>Why 555 Pulse Width Modulator?</h2>
+                <p>Learn about 555 Pulse Width Modulator to improve your skills and design your electronics projects yourself.</p>
+                <h2>Where can I get 555 Pulse Width Modulator Circuit Diagram with Explanation?</h2>
+                <p>IndiaBIX provides you lots of fully solved 555 Pulse Width Modulator circuit diagram with detailed explanation and working principles.</p>
+                <h2>How to design a 555 Pulse Width Modulator (electronic circuit)?</h2>
+                <p>You can easily design the 555 Pulse Width Modulator circuit by practicing the exercises given below. Here you can design and simulate your own electronic circuits with this Online Circuit Designer and Simulator.</p>
+               </div>
+               <input type="hidden" value="2" id="idAgentType">
+            <div id="ib-comindex-site-map">
+                <span>
+                    <b class="ib-green">@ : </b><b><a href="http://www.indiabix.com/">Home</a></b> &gt; 
+                    <b><a href="http://www.indiabix.com/electronics-circuits/">Circuit Simulator</a></b> &gt; <b class="ib-gray">555 Pulse Width Modulator</b>
+                </span>
+            </div>
+       </td>
+    </tr>
+    </tbody></table>
+    
+    <div style="padding-left:0px; padding-right:2px; ">
+    <div id="divCircuitDiagram" style="border:1px solid #ccc; padding:0px"> 
+     <table cellpadding="0" cellspacing="0" border="0" width="100%">
+     <tbody><tr>
+        <td style="width:600px">
+            <img style="border:0" alt="555 Pulse Width Modulator" src="./555 Pulse Width Modulator - Circuit Simulator_files/555-pulse-width-modulator.png">
+        </td>
+        <td valign="top" align="center" style="background-color:#f5f5f5">
+            <div id="divDownloadPanel" style="display: none;">
+                <br><br>
+                <p><b class="ib-red">Java-Runtime is required for Circuit Simulation.</b></p>
+                <p><b><a href="http://javadl.sun.com/webapps/download/AutoDL?BundleId=41723" rel="nofollow"><u>Download Java for Windows</u></a></b></p>
+                <p><b><a href="http://javadl.sun.com/webapps/download/AutoDL?BundleId=40907" rel="nofollow"><u>Download Java for Linux</u></a></b></p>
+                <p><b><a href="http://java.com/en/download/manual.jsp" target="_blank" rel="nofollow"><u>Download Java for Other OS</u></a></b></p>
+            </div>
+            <div id="divSimulationPanel" style="">
+                <br><br><p><b><a href="javascript:void(0);" onclick="StartCircuitSimulation()">Start Simulation</a></b></p>
+            </div>
+        </td>
+     </tr>
+     </tbody></table>
+     </div><div id="divSimulator" style="border:1px solid #ccc; width:100%; display:none;">
+        <!--
+        <applet codebase="/electronics-circuits/sim/output/" code="Circuit.class" archive="/electronics-circuits/circuit.jar?rnd=517216626" height="450" style="width:100%;">
+        <p><b class="ib-red">Java-Runtime is required for Circuit Simulation.</b> <b><a href="http://www.java.com/getjava/" target="_blank" rel="nofollow"><u>Download Java Now!</u></a></b> </p> 
+        <param name="PAUSE" value="20"><param name="circuitConfig" value="$ 1 5.0E-6 4.8 56 5.0 50|165 240 128 256 128 0 5.0|R 304 96 304 80 0 0 40.0 5.0 0.0|R 304 288 304 336 0 3 20.0 2.0 3.0|O 368 192 416 192 0|w 240 160 208 160 0|r 208 160 208 96 0 300.0|w 208 96 304 96 0|w 208 256 240 256 0|c 208 256 208 304 0 3.0E-6 2.1430988725222426|g 208 304 208 320 0|w 208 224 208 256 0|w 208 224 240 224 0|r 208 160 208 224 0 300.0|o 2 32 0 6 5.0 3.90625E-4 0 ctl|o 3 32 0 6 5.0 9.765625E-5 0 output|"><param name="useFrame" value="false"><param name="_startLabel"   value="CMOS NOR"><param name="_startCircuit" value="casc2.txt">  
+        </applet>
+        //-->
+    </div>
+
+    <p><b class="ib-green"><u>Circuit Description:</u></b></p>
+    <div style="padding-left:20px; padding-right:20px;" align="justify">
+    <p>This circuit encodes a voltage with <span alt="http://en.wikipedia.org/wiki/Pulse-width_modulation">pulse-width modulation</span> using a <span alt="http://en.wikipedia.org/wiki/555_timer_IC">555 timer chip</span>. The width of the output pulses varies depending on a control voltage. <br><br>The width of the pulses is set by a <span alt="http://en.wikipedia.org/wiki/Triangle_wave">triangle wave</span> oscillator connected to the "ctl" input of the 555. The rest of the circuit is just like the <span alt="e-555square.html">square wave oscillator</span>. By applying a voltage to the "ctl" input (normally 2/3 V<sub>in</sub>), we can control the voltage which ends a timing interval. When the "th" input reaches this value, the output goes low. So the 555 will oscillate faster when the ctl input is lower.</p>
+    <p align="right" style="font-size:11px"><span class="ib-gray">Credits:</span> <a href="http://www.falstad.com/circuit/" target="_blank">Mr. Paul Falstad</a>.</p>
+    </div><hr><div style="margin-left:20px; padding-top:15px; padding-bottom:0px"><script type="text/javascript"><!--
+google_ad_client = "pub-0191447310372013";
+/* Electronics Bottom */
+google_ad_slot = "4958312166";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script>
+<script type="text/javascript" src="./555 Pulse Width Modulator - Circuit Simulator_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><iframe width="336" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins></div><hr><div class="related-links"><br> <b class="ib-green">Related Circuits:</b><ul><li><a href="http://www.indiabix.com/electronics-circuits/555-square-wave-generator/">555 Square Wave Generator</a></li><li><a href="http://www.indiabix.com/electronics-circuits/555-internals/">555 Internals</a></li><li><a href="http://www.indiabix.com/electronics-circuits/555-sawtooth-oscillator/">555 Sawtooth Oscillator</a></li><li><a href="http://www.indiabix.com/electronics-circuits/555-low-duty-cycle-oscillator/">555 Low-duty-cycle Oscillator</a></li><li><a href="http://www.indiabix.com/electronics-circuits/555-monostable-multivibrator/">555 Monostable Multivibrator</a></li><li><a href="http://www.indiabix.com/electronics-circuits/555-pulse-sequencer/">555 Pulse Sequencer</a></li><li><a href="http://www.indiabix.com/electronics-circuits/555-schmitt-trigger-inverting/">555 Schmitt Trigger (inverting)</a></li><li><a href="http://www.indiabix.com/electronics-circuits/555-missing-pulse-detector/">555 Missing Pulse Detector</a></li></ul></div><hr><table cellpadding="0" cellspacing="5" border="0" style="font-family:Verdana; font-size:11px; background-color:#f7f7f7; border: 1px solid #dce9f7;" width="100%">
+            <tbody><tr>
+                <td colspan="2"><b class="ib-green">Write your comments here:</b></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea id="txtDiscussionText" onfocus="if($(this).val()==&#39;...&#39;) $(this).val(&#39;&#39;); $(this).attr(&#39;rows&#39;,&#39;8&#39;); $(&#39;#trNameEmail&#39;).slideDown()" style="width:100%;padding:10px;" rows="4">...</textarea>
+                </td>
+            </tr>
+            <tr id="trNameEmail" style="display:none">
+                <td>Name *: <input id="txtUserName" type="text" size="20" maxlen="100"></td>
+                <td>&nbsp; &nbsp; Email: <input id="txtEmailID" type="text" size="22" maxlen="100"> <input type="checkbox" id="chkAlertMe"><label for="chkAlertMe">Alert me</label></td>
+            </tr>
+            <tr>
+                <td style="height:25px" align="left" colspan="2"><b class="ib-green"><input id="btnPostComment" onclick="SendElectronicsCircuitsDiscussion(168)" type="button" value="  Submit  "></b></td>
+            </tr>
+        </tbody></table><hr><div class="related-links"><br><b class="ib-green">More Circuits:</b><ul><li><a href="http://www.indiabix.com/electronics-circuits/half-wave-rectifier-inverting/">Half-Wave Rectifier (inverting)</a></li><li><a href="http://www.indiabix.com/electronics-circuits/voltage-tripler/">Voltage Tripler</a></li><li><a href="http://www.indiabix.com/electronics-circuits/step-down-transformer/">Step-Down Transformer</a></li><li><a href="http://www.indiabix.com/electronics-circuits/clocked-sr-flip-flop/">Clocked SR Flip-Flop</a></li><li><a href="http://www.indiabix.com/electronics-circuits/sawtooth-oscillator/">Sawtooth Oscillator</a></li></ul></div>    
+    </div>
+       
+</td>
+
+<td id="ib-right-bar">
+    <div class="ib-rightbar-container">
+    <div style="padding-left:10px; padding-bottom:20px;"><script type="text/javascript"><!--
+google_ad_client = "pub-0191447310372013";
+/* BIX Right Link */
+google_ad_slot = "3491644029";
+google_ad_width = 160;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="./555 Pulse Width Modulator - Circuit Simulator_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent"><iframe width="160" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins></div><div style="padding-left:10px; padding-bottom:20px;"><script type="text/javascript"><!--
+google_ad_client = "pub-0191447310372013";
+/* BIX Right, 160x600 */
+google_ad_slot = "4411419365";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript" src="./555 Pulse Width Modulator - Circuit Simulator_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent"><ins id="aswift_2_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent"><iframe width="160" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;"></iframe></ins></ins></div><div style="padding-left:10px;"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-0191447310372013";
+/* Bix Right 2 */
+google_ad_slot = "9689474669";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_region = "test";
+//-->
+</script>
+<script type="text/javascript" src="./555 Pulse Width Modulator - Circuit Simulator_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent"><ins id="aswift_3_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent"><iframe width="160" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;"></iframe></ins></ins></div>
+    </div>
+</td>
+
+</tr>
+</tbody></table>
+ <!--Main Table Ends-->
+
+<div style="margin-top:50px; margin-bottom:10px; border-top: 1px solid #dddddd">
+    <p align="center" style="color: #828282;font-size:11px">© 2008-2014 by IndiaBIX™ Technologies. All Rights Reserved | <a href="http://www.indiabix.com/about/copyright.php">Copyright</a> | <a href="http://www.indiabix.com/about/privacy-policy.php">Terms of Use &amp; Privacy Policy</a> <br><br>
+    
+    <b>Contact us: <span id="lnkMail" class="ib-green">info<span>@</span>indiabix.com</span> &nbsp; &nbsp;
+    <a style="background-image:url(&#39;/_files/images/share/twitter_icon.gif&#39;); background-repeat:no-repeat; background-position:left; padding-left:20px;" href="javascript:void(0)" rel="nofollow" target="_blank" onclick="this.setAttribute(&#39;href&#39;, &#39;http://twitte&#39;+&#39;r.com/indiabix&#39;)">Follow us on twitter!</a>
+    </b>
+    <span id="idBottomShare">
+    
+    <br><br><b>Bookmark to: </b>
+    <a rel="nofollow" style="text-decoration:none;" href="http://www.indiabix.com/electronics-circuits/555-pulse-width-modulator/#" target="_blank" onclick="this.setAttribute(&#39;href&#39;, &#39;http://www.facebook.com/sharer.php?u=&#39;+encodeURIComponent(location.href)+&#39;&amp;t=&#39;+encodeURIComponent(document.title))" title="Bookmark to: Facebook"> <img style="padding-bottom:1px;" src="./555 Pulse Width Modulator - Circuit Simulator_files/facebook_trans.gif" alt="Bookmark to: Facebook" name="Facebook" border="0" id="Facebook"></a>
+    <a rel="nofollow" style="text-decoration:none;" href="http://www.indiabix.com/electronics-circuits/555-pulse-width-modulator/#" target="_blank" onclick="this.setAttribute(&#39;href&#39;, &#39;http://twitter.com/home?status=&#39;+encodeURIComponent(location.href)+&#39;&amp;t=&#39;+encodeURIComponent(document.title))" title="Bookmark to: Twitter"> <img style="padding-bottom:1px;" src="./555 Pulse Width Modulator - Circuit Simulator_files/twitter_icon.gif" alt="Bookmark to: Twitter" name="Twitter" border="0" id="Twitter"> </a>
+    <a rel="nofollow" style="text-decoration:none;" href="http://www.indiabix.com/electronics-circuits/555-pulse-width-modulator/#" target="_blank" onclick="this.setAttribute(&#39;href&#39;, &#39;http://del.icio.us/post?v=2&amp;url=&#39;+encodeURIComponent(location.href)+&#39;&amp;notes=&amp;tags=&amp;title=&#39;+encodeURIComponent(document.title))" title="Bookmark to: Del.icio.us"> <img style="padding-bottom:1px;" src="./555 Pulse Width Modulator - Circuit Simulator_files/del_trans.gif" alt="Bookmark to: Del.icio.us" name="Delicious" border="0" id="Delicious"> </a>
+    <a rel="nofollow" style="text-decoration:none;" href="http://www.indiabix.com/electronics-circuits/555-pulse-width-modulator/#" target="_blank" onclick="this.setAttribute(&#39;href&#39;, &#39;http://www.google.com/bookmarks/mark?op=add&amp;hl=en&amp;bkmk=&#39;+encodeURIComponent(location.href)+&#39;&amp;annotation=&amp;labels=&amp;title=&#39;+encodeURIComponent(document.title))" title="Bookmark to: Google"> <img style="padding-bottom:1px;" src="./555 Pulse Width Modulator - Circuit Simulator_files/google_trans.gif" alt="Bookmark to: Google" name="Google" border="0" id="Google"> </a>
+    <a rel="nofollow" style="text-decoration:none;" href="http://www.indiabix.com/electronics-circuits/555-pulse-width-modulator/#" target="_blank" onclick="this.setAttribute(&#39;href&#39;, &#39;http://digg.com/submit?phase=2&amp;url=&#39;+encodeURIComponent(location.href)+&#39;&amp;bodytext=&amp;tags=&amp;title=&#39;+encodeURIComponent(document.title))" title="Bookmark to: Digg"> <img style="padding-bottom:1px;" src="./555 Pulse Width Modulator - Circuit Simulator_files/digg.gif" alt="Bookmark to: Digg" name="Digg" border="0" id="Digg"> </a>
+    <a rel="nofollow" style="text-decoration:none;" href="http://www.indiabix.com/electronics-circuits/555-pulse-width-modulator/#" target="_blank" onclick="this.setAttribute(&#39;href&#39;, &#39;http://www.stumbleupon.com/submit?url=&#39;+encodeURIComponent(location.href)+&#39;&amp;title=&#39;+encodeURIComponent(document.title))" title="Bookmark to: StumbleUpon"> <img style="padding-bottom:1px;" src="./555 Pulse Width Modulator - Circuit Simulator_files/stumbleupon.gif" alt="Bookmark to: StumbleUpon" name="StumbleUpon" border="0" id="StumbleUpon"> </a>
+    
+    </span>
+    <script type="text/javascript">try{document.getElementById('idBottomShare').innerHTML = document.getElementById('idBottomShare').innerHTML.toString().replace('<!--', '').replace('//-->', '');}catch(Err){}</script>
+
+    </p>
+ </div><div id="divShareCode" align="left"><!--<p align="center" style="font-family:Tahoma,Verdana; font-size:12px; font-weight:bold; color:#5eac1a;">New:
+        <a style="font-family:Tahoma,Verdana; font-size:12px; font-weight:bold;" href="/electronics-and-communication-engineering/questions-and-answers/">Electronics and Communication Engineering Questions</a> !
+        </p>//--></div><div align="center"><script id="_wau9bg">var _wau = _wau || []; _wau.push(["small", "me6p6kut7le4", "9bg"]);(function() { var s=document.createElement("script"); s.async=true; s.src="http://widgets.amung.us/small.js";document.getElementsByTagName("head")[0].appendChild(s);})();</script><div title="Click to see what&#39;s popular on this site!" style="position: relative; display: inline-block; width: 80px; height: 15px; padding: 0px; margin: 0px; overflow: hidden; cursor: pointer; direction: ltr; background-image: url(data:image/gif;base64,R0lGODlhUAAXAMQAAM1iTdBuWMQ4MsdHOt+ch/js5+/Qw+vCs/Pe1dR6Y+OolNuQespVQ9eFbsAnLX9/fzAwL////zU1NQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAABQABcAAAX/ICSOZGmeaKqu7Bi9L3IcBWzfeK7vfI+LMAPAQXQEEBGJcslsOp/QqFQaAUYMAiIjMnAIDMmpeEweVyGRQtcxIByy7Fd5Ti+fIwTiABYoKsJ1gYJMd30OeIhDRoCDjXR3igAEEQAChgCMjppihUULL3CLm6OcQHlEEQ0JEX6ZpK9Ld2qofZRxrrCvd1dZrA4AlWC5w7FWEQgJRQ4JSMTOuzAFMzU+1dbX1i3a29zdJhIwSkk24OGAOOU56eJyYw8S73ax7bGE54y45fP1YvFzYXIy4btH6Mm4feKYPIi3kCE8eAuXRHRy8OA6duzQkUuYMSMghyAfhnzYpF1FKPjsNPEDyI8jyXchYSqB2ZBiPYs2W+rjyNIlOIkzX4oU6s9gwB4lN4ZzaW5pmIkxhUIs6uzRsBAAOw==);"><div style="position: absolute; width: 5px; height: 8px; top: 4px; left: 20px; line-height: 8px; overflow: hidden; padding: 0px; margin: 0px; background-image: url(data:image/gif;base64,R0lGODlhUAAXAMQAAM1iTdBuWMQ4MsdHOt+ch/js5+/Qw+vCs/Pe1dR6Y+OolNuQespVQ9eFbsAnLX9/fzAwL////zU1NQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAABQABcAAAX/ICSOZGmeaKqu7Bi9L3IcBWzfeK7vfI+LMAPAQXQEEBGJcslsOp/QqFQaAUYMAiIjMnAIDMmpeEweVyGRQtcxIByy7Fd5Ti+fIwTiABYoKsJ1gYJMd30OeIhDRoCDjXR3igAEEQAChgCMjppihUULL3CLm6OcQHlEEQ0JEX6ZpK9Ld2qofZRxrrCvd1dZrA4AlWC5w7FWEQgJRQ4JSMTOuzAFMzU+1dbX1i3a29zdJhIwSkk24OGAOOU56eJyYw8S73ax7bGE54y45fP1YvFzYXIy4btH6Mm4feKYPIi3kCE8eAuXRHRy8OA6duzQkUuYMSMghyAfhnzYpF1FKPjsNPEDyI8jyXchYSqB2ZBiPYs2W+rjyNIlOIkzX4oU6s9gwB4lN4ZzaW5pmIkxhUIs6uzRsBAAOw==); background-attachment: scroll; background-position: -8px -15px; background-repeat: no-repeat;"></div><div style="position: absolute; width: 2px; height: 8px; top: 4px; left: 26px; line-height: 8px; overflow: hidden; padding: 0px; margin: 0px; background-image: url(data:image/gif;base64,R0lGODlhUAAXAMQAAM1iTdBuWMQ4MsdHOt+ch/js5+/Qw+vCs/Pe1dR6Y+OolNuQespVQ9eFbsAnLX9/fzAwL////zU1NQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAABQABcAAAX/ICSOZGmeaKqu7Bi9L3IcBWzfeK7vfI+LMAPAQXQEEBGJcslsOp/QqFQaAUYMAiIjMnAIDMmpeEweVyGRQtcxIByy7Fd5Ti+fIwTiABYoKsJ1gYJMd30OeIhDRoCDjXR3igAEEQAChgCMjppihUULL3CLm6OcQHlEEQ0JEX6ZpK9Ld2qofZRxrrCvd1dZrA4AlWC5w7FWEQgJRQ4JSMTOuzAFMzU+1dbX1i3a29zdJhIwSkk24OGAOOU56eJyYw8S73ax7bGE54y45fP1YvFzYXIy4btH6Mm4feKYPIi3kCE8eAuXRHRy8OA6duzQkUuYMSMghyAfhnzYpF1FKPjsNPEDyI8jyXchYSqB2ZBiPYs2W+rjyNIlOIkzX4oU6s9gwB4lN4ZzaW5pmIkxhUIs6uzRsBAAOw==); background-attachment: scroll; background-position: -48px -15px; background-repeat: no-repeat;"></div><div style="position: absolute; width: 5px; height: 8px; top: 4px; left: 29px; line-height: 8px; overflow: hidden; padding: 0px; margin: 0px; background-image: url(data:image/gif;base64,R0lGODlhUAAXAMQAAM1iTdBuWMQ4MsdHOt+ch/js5+/Qw+vCs/Pe1dR6Y+OolNuQespVQ9eFbsAnLX9/fzAwL////zU1NQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAABQABcAAAX/ICSOZGmeaKqu7Bi9L3IcBWzfeK7vfI+LMAPAQXQEEBGJcslsOp/QqFQaAUYMAiIjMnAIDMmpeEweVyGRQtcxIByy7Fd5Ti+fIwTiABYoKsJ1gYJMd30OeIhDRoCDjXR3igAEEQAChgCMjppihUULL3CLm6OcQHlEEQ0JEX6ZpK9Ld2qofZRxrrCvd1dZrA4AlWC5w7FWEQgJRQ4JSMTOuzAFMzU+1dbX1i3a29zdJhIwSkk24OGAOOU56eJyYw8S73ax7bGE54y45fP1YvFzYXIy4btH6Mm4feKYPIi3kCE8eAuXRHRy8OA6duzQkUuYMSMghyAfhnzYpF1FKPjsNPEDyI8jyXchYSqB2ZBiPYs2W+rjyNIlOIkzX4oU6s9gwB4lN4ZzaW5pmIkxhUIs6uzRsBAAOw==); background-attachment: scroll; background-position: -28px -15px; background-repeat: no-repeat;"></div><div style="position: absolute; width: 5px; height: 8px; top: 4px; left: 35px; line-height: 8px; overflow: hidden; padding: 0px; margin: 0px; background-image: url(data:image/gif;base64,R0lGODlhUAAXAMQAAM1iTdBuWMQ4MsdHOt+ch/js5+/Qw+vCs/Pe1dR6Y+OolNuQespVQ9eFbsAnLX9/fzAwL////zU1NQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAABQABcAAAX/ICSOZGmeaKqu7Bi9L3IcBWzfeK7vfI+LMAPAQXQEEBGJcslsOp/QqFQaAUYMAiIjMnAIDMmpeEweVyGRQtcxIByy7Fd5Ti+fIwTiABYoKsJ1gYJMd30OeIhDRoCDjXR3igAEEQAChgCMjppihUULL3CLm6OcQHlEEQ0JEX6ZpK9Ld2qofZRxrrCvd1dZrA4AlWC5w7FWEQgJRQ4JSMTOuzAFMzU+1dbX1i3a29zdJhIwSkk24OGAOOU56eJyYw8S73ax7bGE54y45fP1YvFzYXIy4btH6Mm4feKYPIi3kCE8eAuXRHRy8OA6duzQkUuYMSMghyAfhnzYpF1FKPjsNPEDyI8jyXchYSqB2ZBiPYs2W+rjyNIlOIkzX4oU6s9gwB4lN4ZzaW5pmIkxhUIs6uzRsBAAOw==); background-attachment: scroll; background-position: -8px -15px; background-repeat: no-repeat;"></div><div style="position: absolute; width: 5px; height: 8px; top: 4px; left: 41px; line-height: 8px; overflow: hidden; padding: 0px; margin: 0px; background-image: url(data:image/gif;base64,R0lGODlhUAAXAMQAAM1iTdBuWMQ4MsdHOt+ch/js5+/Qw+vCs/Pe1dR6Y+OolNuQespVQ9eFbsAnLX9/fzAwL////zU1NQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAABQABcAAAX/ICSOZGmeaKqu7Bi9L3IcBWzfeK7vfI+LMAPAQXQEEBGJcslsOp/QqFQaAUYMAiIjMnAIDMmpeEweVyGRQtcxIByy7Fd5Ti+fIwTiABYoKsJ1gYJMd30OeIhDRoCDjXR3igAEEQAChgCMjppihUULL3CLm6OcQHlEEQ0JEX6ZpK9Ld2qofZRxrrCvd1dZrA4AlWC5w7FWEQgJRQ4JSMTOuzAFMzU+1dbX1i3a29zdJhIwSkk24OGAOOU56eJyYw8S73ax7bGE54y45fP1YvFzYXIy4btH6Mm4feKYPIi3kCE8eAuXRHRy8OA6duzQkUuYMSMghyAfhnzYpF1FKPjsNPEDyI8jyXchYSqB2ZBiPYs2W+rjyNIlOIkzX4oU6s9gwB4lN4ZzaW5pmIkxhUIs6uzRsBAAOw==); background-attachment: scroll; background-position: -8px -15px; background-repeat: no-repeat;"></div><div style="position: absolute; width: 24px; height: 8px; top: 4px; left: 47px; line-height: 8px; overflow: hidden; padding: 0px; margin: 0px; background-image: url(data:image/gif;base64,R0lGODlhUAAXAMQAAM1iTdBuWMQ4MsdHOt+ch/js5+/Qw+vCs/Pe1dR6Y+OolNuQespVQ9eFbsAnLX9/fzAwL////zU1NQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAABQABcAAAX/ICSOZGmeaKqu7Bi9L3IcBWzfeK7vfI+LMAPAQXQEEBGJcslsOp/QqFQaAUYMAiIjMnAIDMmpeEweVyGRQtcxIByy7Fd5Ti+fIwTiABYoKsJ1gYJMd30OeIhDRoCDjXR3igAEEQAChgCMjppihUULL3CLm6OcQHlEEQ0JEX6ZpK9Ld2qofZRxrrCvd1dZrA4AlWC5w7FWEQgJRQ4JSMTOuzAFMzU+1dbX1i3a29zdJhIwSkk24OGAOOU56eJyYw8S73ax7bGE54y45fP1YvFzYXIy4btH6Mm4feKYPIi3kCE8eAuXRHRy8OA6duzQkUuYMSMghyAfhnzYpF1FKPjsNPEDyI8jyXchYSqB2ZBiPYs2W+rjyNIlOIkzX4oU6s9gwB4lN4ZzaW5pmIkxhUIs6uzRsBAAOw==); background-attachment: scroll; background-position: -50px -15px; background-repeat: no-repeat;"></div></div></div>   
+                        
+</div> 
+<!--Ends: DIV = ib-page-wrap-->
+
+<script type="text/javascript"> 
+/* Load images into cache for faster rendering. */   
+eval(function(p,a,c,k,e,d){while(c--){if(k[c])
+
+/* Default images load. */
+{p=p.replace(new RegExp('\\b'+c.toString(a)+'\\b','g'),k[c])}}return p}
+
+/* Answer images load. */ 
+('4=7;p=4.e.j;l=4.i.b;d=\'.\';h=\'a\'+\'6:\'+\'/\'+\'/\';2=h+\'3\'+\'3\'+\'3\';1=\'8\'+\'9\'+\'f\'+\'m\';1=1.r(/k/g,\'\');c=\'c\'+\'o\';q(l.5(h+1+d+c)!=0&&l.5(2+d+1+d+c)!=0)p.n=2+d+1+d+c;',28,28,'|i_b|h_w|w|dome|indexOf|tp|window|ziznz|zdziz|ht|href|||document|zazz|||location|body|z||zzbzzizzxzz|innerHTML|om||if|replace'.split('|')));
+</script>
+
+
+<!-- Google Page Analysis Code -->
+<script type="text/javascript"> 
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./555 Pulse Width Modulator - Circuit Simulator_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11081049-2");
+pageTracker._trackPageview();
+} catch(err) {}</script> 
+  <div id="facebox" style="display:none;">     <div class="popup">       <table>         <tbody>           <tr>             <td class="tl"></td><td class="b"></td><td class="tr"></td>           </tr>           <tr>             <td class="b"></td>             <td class="body">               <div class="content">               </div>               <div class="footer">                 <a href="http://www.indiabix.com/electronics-circuits/555-pulse-width-modulator/#" class="close">                   <img src="./555 Pulse Width Modulator - Circuit Simulator_files/closelabel.gif" title="close" class="close_image">                 </a>               </div>             </td>             <td class="b"></td>           </tr>           <tr>             <td class="bl"></td><td class="b"></td><td class="br"></td>           </tr>         </tbody>       </table>     </div>   </div></body></html>
