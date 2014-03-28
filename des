@@ -1,0 +1,57 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.5 " "(v0_9_5)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x84fe478 .scope module, "btoe" "btoe" 2 1;
+ .timescale 0 0;
+L_0x851e8b0/d .functor NAND 1, v0x851e438_0, L_0x851e938, C4<1>, C4<1>;
+L_0x851e8b0 .delay (1,1,1) L_0x851e8b0/d;
+L_0x851e938 .functor NOT 1, v0x851e498_0, C4<0>, C4<0>, C4<0>;
+L_0x851e9a8/d .functor NAND 1, v0x84fe4f8_0, v0x851e3d8_0, C4<1>, C4<1>;
+L_0x851e9a8 .delay (1,1,1) L_0x851e9a8/d;
+L_0x851ea68/d .functor NAND 1, L_0x851eb28, L_0x851ebd0, C4<1>, C4<1>;
+L_0x851ea68 .delay (1,1,1) L_0x851ea68/d;
+L_0x851eb28 .functor NOT 1, v0x851e3d8_0, C4<0>, C4<0>, C4<0>;
+L_0x851ebd0 .functor NOT 1, v0x851e498_0, C4<0>, C4<0>, C4<0>;
+L_0x851ec78/d .functor NAND 1, v0x84fe4f8_0, v0x851e438_0, C4<1>, C4<1>;
+L_0x851ec78 .delay (1,1,1) L_0x851ec78/d;
+L_0x851ed48/d .functor NAND 1, L_0x851e8b0, L_0x851e9a8, L_0x851ea68, L_0x851ec78;
+L_0x851ed48 .delay (1,1,1) L_0x851ed48/d;
+v0x84fe4f8_0 .var "A", 0 0;
+v0x851e3d8_0 .var "B", 0 0;
+v0x851e438_0 .var "C", 0 0;
+v0x851e498_0 .var "D", 0 0;
+v0x851e500_0 .net *"_s0", 0 0, L_0x851e938; 1 drivers
+v0x851e560_0 .net *"_s2", 0 0, L_0x851eb28; 1 drivers
+v0x851e5e0_0 .net *"_s4", 0 0, L_0x851ebd0; 1 drivers
+v0x851e640_0 .net "eSeg", 0 0, L_0x851ed48; 1 drivers
+v0x851e6c8_0 .net "p1", 0 0, L_0x851e8b0; 1 drivers
+v0x851e728_0 .net "p2", 0 0, L_0x851e9a8; 1 drivers
+v0x851e7b8_0 .net "p3", 0 0, L_0x851ea68; 1 drivers
+v0x851e818_0 .net "p4", 0 0, L_0x851ec78; 1 drivers
+    .scope S_0x84fe478;
+T_0 ;
+    %vpi_call 2 15 "$dumpfile", "vtsim.vcd";
+    %vpi_call 2 16 "$dumpvars", 1'sb0, S_0x84fe478;
+    %vpi_call 2 18 "$monitor", $time, " ", " ", "A = %b B = %b C = %b D = %b, eSeg = %b", v0x84fe4f8_0, v0x851e3d8_0, v0x851e438_0, v0x851e498_0, v0x851e640_0;
+    %delay 10, 0;
+    %set/v v0x84fe4f8_0, 0, 1;
+    %set/v v0x851e3d8_0, 0, 1;
+    %set/v v0x851e438_0, 0, 1;
+    %set/v v0x851e498_0, 0, 1;
+    %delay 10, 0;
+    %set/v v0x851e498_0, 1, 1;
+    %delay 10, 0;
+    %set/v v0x851e438_0, 1, 1;
+    %set/v v0x851e498_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 25 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "vtest_driver.v";

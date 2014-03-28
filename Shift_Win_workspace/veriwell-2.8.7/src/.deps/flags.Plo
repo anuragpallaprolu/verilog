@@ -1,0 +1,14 @@
+flags.lo: flags.cc vtypes.h ../config.h tree.h veriuser.h tree.def \
+ flags.h
+
+vtypes.h:
+
+../config.h:
+
+tree.h:
+
+veriuser.h:
+
+tree.def:
+
+flags.h:

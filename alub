@@ -1,0 +1,124 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.5 " "(v0_9_5)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0xfd9160 .scope module, "tb" "tb" 2 1;
+ .timescale 0 0;
+S_0xfd8bd0 .scope module, "test" "alub_tb" 2 2, 2 10, S_0xfd9160;
+ .timescale 0 0;
+v0x1015280_0 .var "cin", 0 0;
+v0x1015300_0 .net "cout", 0 0, L_0x1015d00; 1 drivers
+v0x1015380_0 .var "op", 1 0;
+v0x1015450_0 .net "result", 0 0, v0x10141b0_0; 1 drivers
+v0x1015520_0 .var "x", 0 0;
+v0x10155f0_0 .var "y", 0 0;
+S_0xfd98a0 .scope module, "b0" "block" 2 16, 3 34, S_0xfd8bd0;
+ .timescale 0 0;
+L_0x10156c0 .functor AND 1, v0x1015520_0, v0x10155f0_0, C4<1>, C4<1>;
+L_0x1015770 .functor OR 1, C4<z>, v0x10155f0_0, C4<0>, C4<0>;
+v0x1014be0_0 .net "carryin", 0 0, v0x1015280_0; 1 drivers
+v0x1014c60_0 .alias "carryout", 0 0, v0x1015300_0;
+v0x1014ce0_0 .net "control", 1 0, v0x1015380_0; 1 drivers
+v0x1014d60_0 .net "in", 0 0, C4<z>; 0 drivers
+v0x1014e10_0 .net "in1", 0 0, v0x1015520_0; 1 drivers
+v0x1014ec0_0 .net "in2", 0 0, v0x10155f0_0; 1 drivers
+v0x1014f40_0 .alias "result", 0 0, v0x1015450_0;
+v0x1014ff0_0 .net "w0", 0 0, L_0x10156c0; 1 drivers
+v0x10150f0_0 .net "w1", 0 0, L_0x1015770; 1 drivers
+v0x10151a0_0 .net "w2", 0 0, L_0x1015a30; 1 drivers
+S_0x1014300 .scope module, "f0" "fa" 3 42, 3 22, S_0xfd98a0;
+ .timescale 0 0;
+L_0x10158b0 .functor XOR 1, L_0x1015d00, v0x1015520_0, C4<0>, C4<0>;
+L_0x1015a30 .functor XOR 1, L_0x10158b0, v0x10155f0_0, C4<0>, C4<0>;
+L_0x1015a90 .functor NOT 1, L_0x1015d00, C4<0>, C4<0>, C4<0>;
+L_0x1015af0 .functor AND 1, L_0x1015a90, v0x1015520_0, C4<1>, C4<1>;
+L_0x1015b50 .functor AND 1, L_0x1015af0, v0x10155f0_0, C4<1>, C4<1>;
+L_0x1015bb0 .functor OR 1, v0x1015520_0, v0x10155f0_0, C4<0>, C4<0>;
+L_0x1015c50 .functor AND 1, L_0x1015d00, L_0x1015bb0, C4<1>, C4<1>;
+L_0x1015d00 .functor OR 1, L_0x1015b50, L_0x1015c50, C4<0>, C4<0>;
+v0x10143f0_0 .net *"_s0", 0 0, L_0x10158b0; 1 drivers
+v0x10144b0_0 .net *"_s10", 0 0, L_0x1015bb0; 1 drivers
+v0x1014550_0 .net *"_s12", 0 0, L_0x1015c50; 1 drivers
+v0x10145f0_0 .net *"_s4", 0 0, L_0x1015a90; 1 drivers
+v0x10146a0_0 .net *"_s6", 0 0, L_0x1015af0; 1 drivers
+v0x1014740_0 .net *"_s8", 0 0, L_0x1015b50; 1 drivers
+v0x1014820_0 .alias "a", 0 0, v0x1014e10_0;
+v0x10148c0_0 .alias "b", 0 0, v0x1014ec0_0;
+v0x10149b0_0 .alias "cin", 0 0, v0x1015300_0;
+v0x1014a50_0 .alias "cout", 0 0, v0x1015300_0;
+v0x1014b30_0 .alias "sum", 0 0, v0x10151a0_0;
+S_0xffa840 .scope module, "m0" "mux" 3 43, 3 6, S_0xfd98a0;
+ .timescale 0 0;
+v0xffa930_0 .alias "in1", 0 0, v0x1014ff0_0;
+v0x1014070_0 .alias "in2", 0 0, v0x10150f0_0;
+v0x1014110_0 .alias "in3", 0 0, v0x10151a0_0;
+v0x10141b0_0 .var "out", 0 0;
+v0x1014260_0 .alias "select", 1 0, v0x1014ce0_0;
+E_0xfd90b0 .event edge, v0x1014260_0, v0x1014070_0, v0xffa930_0;
+    .scope S_0xffa840;
+T_0 ;
+    %wait E_0xfd90b0;
+    %load/v 8, v0x1014260_0, 2;
+    %cmpi/u 8, 0, 2;
+    %jmp/0xz  T_0.0, 4;
+    %load/v 8, v0xffa930_0, 1;
+    %set/v v0x10141b0_0, 8, 1;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/v 8, v0x1014260_0, 2;
+    %cmpi/u 8, 1, 2;
+    %jmp/0xz  T_0.2, 4;
+    %load/v 8, v0x1014070_0, 1;
+    %set/v v0x10141b0_0, 8, 1;
+    %jmp T_0.3;
+T_0.2 ;
+    %load/v 8, v0x1014260_0, 2;
+    %cmpi/u 8, 2, 2;
+    %jmp/0xz  T_0.4, 4;
+    %load/v 8, v0x1014110_0, 1;
+    %set/v v0x10141b0_0, 8, 1;
+T_0.4 ;
+T_0.3 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0, $push;
+    .scope S_0xfd8bd0;
+T_1 ;
+    %set/v v0x1015520_0, 1, 1;
+    %set/v v0x10155f0_0, 0, 1;
+    %delay 10, 0;
+    %set/v v0x1015280_0, 0, 1;
+    %ix/load 0, 0, 0;
+    %set/x0 v0x1015380_0, 0, 1;
+    %ix/load 0, 1, 0;
+    %set/x0 v0x1015380_0, 0, 1;
+    %delay 20, 0;
+    %set/v v0x1015280_0, 0, 1;
+    %ix/load 0, 0, 0;
+    %set/x0 v0x1015380_0, 0, 1;
+    %ix/load 0, 1, 0;
+    %set/x0 v0x1015380_0, 1, 1;
+    %delay 30, 0;
+    %set/v v0x1015280_0, 0, 1;
+    %ix/load 0, 0, 0;
+    %set/x0 v0x1015380_0, 1, 1;
+    %ix/load 0, 1, 0;
+    %set/x0 v0x1015380_0, 1, 1;
+    %delay 40, 0;
+    %vpi_call 2 23 "$finish";
+    %end;
+    .thread T_1;
+    .scope S_0xfd9160;
+T_2 ;
+    %vpi_call 2 5 "$dumpfile", "alubtest.vcd";
+    %vpi_call 2 6 "$dumpvars", 1'sb0, S_0xfd8bd0;
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "alub_tb.v";
+    "alub.v";

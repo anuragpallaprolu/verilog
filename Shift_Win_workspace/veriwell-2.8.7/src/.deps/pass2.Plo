@@ -1,0 +1,149 @@
+pass2.lo: pass2.cc glue.h /usr/include/stdio.h /usr/include/_ansi.h \
+ /usr/include/newlib.h /usr/include/sys/config.h \
+ /usr/include/machine/ieeefp.h /usr/include/sys/features.h \
+ /usr/include/cygwin/config.h \
+ /usr/lib/gcc/i686-pc-cygwin/4.7.3/include/stddef.h \
+ /usr/lib/gcc/i686-pc-cygwin/4.7.3/include/stdarg.h \
+ /usr/include/sys/reent.h /usr/include/_ansi.h /usr/include/sys/_types.h \
+ /usr/include/machine/_types.h /usr/include/machine/_default_types.h \
+ /usr/include/sys/lock.h /usr/include/sys/types.h \
+ /usr/include/machine/types.h /usr/include/cygwin/types.h \
+ /usr/lib/gcc/i686-pc-cygwin/4.7.3/include/stdint.h /usr/include/stdint.h \
+ /usr/include/bits/wordsize.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/byteswap.h \
+ /usr/include/sys/sysmacros.h /usr/include/sys/stdio.h \
+ /usr/include/sys/cdefs.h /usr/include/stdlib.h \
+ /usr/include/machine/stdlib.h /usr/include/alloca.h \
+ /usr/include/cygwin/stdlib.h /usr/include/cygwin/wait.h \
+ /usr/include/unistd.h /usr/include/sys/unistd.h /usr/include/getopt.h \
+ /usr/include/signal.h /usr/include/sys/signal.h \
+ /usr/include/cygwin/signal.h vtypes.h ../config.h /usr/include/string.h \
+ /usr/include/sys/string.h tree.h veriuser.h tree.def schedule.h \
+ obstack.h runtime.h decl.h scope.h macro.h io.h store.h udp.h pass3.h \
+ eval.h copy.h check.h pass2.h veriwell.h flags.h lex.h
+
+glue.h:
+
+/usr/include/stdio.h:
+
+/usr/include/_ansi.h:
+
+/usr/include/newlib.h:
+
+/usr/include/sys/config.h:
+
+/usr/include/machine/ieeefp.h:
+
+/usr/include/sys/features.h:
+
+/usr/include/cygwin/config.h:
+
+/usr/lib/gcc/i686-pc-cygwin/4.7.3/include/stddef.h:
+
+/usr/lib/gcc/i686-pc-cygwin/4.7.3/include/stdarg.h:
+
+/usr/include/sys/reent.h:
+
+/usr/include/_ansi.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/machine/_default_types.h:
+
+/usr/include/sys/lock.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/machine/types.h:
+
+/usr/include/cygwin/types.h:
+
+/usr/lib/gcc/i686-pc-cygwin/4.7.3/include/stdint.h:
+
+/usr/include/stdint.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/byteswap.h:
+
+/usr/include/sys/sysmacros.h:
+
+/usr/include/sys/stdio.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/machine/stdlib.h:
+
+/usr/include/alloca.h:
+
+/usr/include/cygwin/stdlib.h:
+
+/usr/include/cygwin/wait.h:
+
+/usr/include/unistd.h:
+
+/usr/include/sys/unistd.h:
+
+/usr/include/getopt.h:
+
+/usr/include/signal.h:
+
+/usr/include/sys/signal.h:
+
+/usr/include/cygwin/signal.h:
+
+vtypes.h:
+
+../config.h:
+
+/usr/include/string.h:
+
+/usr/include/sys/string.h:
+
+tree.h:
+
+veriuser.h:
+
+tree.def:
+
+schedule.h:
+
+obstack.h:
+
+runtime.h:
+
+decl.h:
+
+scope.h:
+
+macro.h:
+
+io.h:
+
+store.h:
+
+udp.h:
+
+pass3.h:
+
+eval.h:
+
+copy.h:
+
+check.h:
+
+pass2.h:
+
+veriwell.h:
+
+flags.h:
+
+lex.h:

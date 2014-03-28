@@ -1,0 +1,52 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.5 " "(v0_9_5)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x16c7d60 .scope module, "mux_tb" "mux_tb" 2 1;
+ .timescale 0 0;
+v0x16fd090_0 .var "d", 3 0;
+v0x16fd160_0 .net "q", 0 0, L_0x16fd2c0; 1 drivers
+v0x16fd210_0 .var "slc", 1 0;
+S_0x16ed8b0 .scope module, "m0" "mux" 2 20, 3 5, S_0x16c7d60;
+ .timescale 0 0;
+v0x16ed9a0_0 .net "d", 3 0, v0x16fd090_0; 1 drivers
+v0x16fcf50_0 .alias "q", 0 0, v0x16fd160_0;
+v0x16fcff0_0 .net "select", 1 0, v0x16fd210_0; 1 drivers
+L_0x16fd2c0 .part/v v0x16fd090_0, v0x16fd210_0, 1;
+    .scope S_0x16c7d60;
+T_0 ;
+    %vpi_call 2 8 "$dumpfile", "mux_tb.vcd";
+    %vpi_call 2 9 "$dumpvars", 2'sb01, S_0x16c7d60;
+    %vpi_call 2 10 "$monitor", "slc=%b, d=%b, q=%b", v0x16fd210_0, v0x16fd090_0, v0x16fd160_0;
+    %ix/load 0, 0, 0;
+    %set/x0 v0x16fd090_0, 0, 1;
+    %ix/load 0, 1, 0;
+    %set/x0 v0x16fd090_0, 1, 1;
+    %ix/load 0, 2, 0;
+    %set/x0 v0x16fd090_0, 0, 1;
+    %ix/load 0, 3, 0;
+    %set/x0 v0x16fd090_0, 0, 1;
+    %delay 10, 0;
+    %movi 8, 1, 2;
+    %set/v v0x16fd210_0, 8, 2;
+    %delay 15, 0;
+    %set/v v0x16fd210_0, 0, 2;
+    %delay 20, 0;
+    %set/v v0x16fd210_0, 0, 2;
+    %delay 25, 0;
+    %movi 8, 1, 2;
+    %set/v v0x16fd210_0, 8, 2;
+    %delay 40, 0;
+    %set/v v0x16fd210_0, 0, 2;
+    %delay 45, 0;
+    %vpi_call 2 17 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "mux_tb.v";
+    "mux.v";

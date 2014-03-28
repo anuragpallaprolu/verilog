@@ -1,0 +1,4 @@
+{C:/Users/user/Desktop/Cybernet Corp/testsim.v} {1 {vlog -work work_cybervlsi -vopt -nocovercells {C:/Users/user/Desktop/Cybernet Corp/testsim.v}
+Model Technology ModelSim SE vlog 6.3f Compiler 2008.02 Feb 28 2008
+
+} {} {}}

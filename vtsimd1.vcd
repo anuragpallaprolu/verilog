@@ -1,0 +1,60 @@
+$date
+	Sat Oct 12 08:58:46 2013
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module btoe $end
+$var wire 1 ! eSeg $end
+$var wire 1 " p1 $end
+$var wire 1 # p2 $end
+$var wire 1 $ p3 $end
+$var wire 1 % p4 $end
+$var reg 1 & A $end
+$var reg 1 ' B $end
+$var reg 1 ( C $end
+$var reg 1 ) D $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x)
+x(
+x'
+x&
+x%
+x$
+x#
+x"
+z!
+$end
+#10
+0)
+0(
+0'
+0&
+#11
+0$
+1"
+1%
+1#
+#12
+1!
+#20
+1)
+#21
+1$
+#22
+0!
+#30
+0)
+1(
+#31
+0$
+0"
+#32
+1!
+#40

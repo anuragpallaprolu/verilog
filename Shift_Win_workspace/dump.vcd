@@ -1,0 +1,25 @@
+$date
+	Sat Dec 21 22:06:05 2013
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module kmap $end
+$var wire 1 ! a $end
+$var wire 1 " b $end
+$var wire 1 # c $end
+$var wire 1 $ d $end
+$var reg 1 % eseg $end
+$upscope $end
+$enddefinitions $end
+#40
+$dumpvars
+1%
+z$
+z#
+z"
+z!
+$end

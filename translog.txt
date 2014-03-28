@@ -1,0 +1,22 @@
+       --- Transient Analysis ---
+
+time:	 0	 time
+V(n002):	 149686	 voltage
+V(n003):	 149686	 voltage
+V(n005):	 149686	 voltage
+V(n004):	 149686	 voltage
+V(n001):	 149686	 voltage
+V(nc_01):	 149686	 voltage
+V(nc_02):	 149686	 voltage
+I(C2):	 8.73115e-026	 device_current
+I(C1):	 8.73115e-026	 device_current
+I(R4):	 5.82077e-012	 device_current
+I(R3):	 0	 device_current
+I(R2):	 2.91038e-012	 device_current
+I(R1):	 2.91038e-012	 device_current
+I(V1):	 1.81899e-012	 device_current
+Ix(u1:1):	 3.13415e-014	 subckt_current
+Ix(u1:2):	 3.13431e-014	 subckt_current
+Ix(u1:3):	 -1.58096e-013	 subckt_current
+Ix(u1:4):	 6.69105e-014	 subckt_current
+Ix(u1:5):	 3.91992e-012	 subckt_current

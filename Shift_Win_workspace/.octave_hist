@@ -1,0 +1,91 @@
+# Octave 3.6.4, Sun Jul 14 22:53:23 2013 IST <user@user-PC>
+plot
+# Octave 3.6.4, Mon Jul 15 01:31:21 2013 IST <user@user-PC>
+f = x^2
+x = [1:10]
+f = x^2
+f = x*x
+f = x
+plot(f)
+unset multiplot;
+# Octave 3.6.4, Mon Jul 15 18:37:07 2013 IST <user@user-PC>
+plot(x,x)
+plot(x)
+x = [1:3]
+plot(x)
+unset multiplot;
+# Octave 3.6.4, Mon Jul 15 18:39:50 2013 IST <user@user-PC>
+close all
+setenv("GNUTERM", "windows")
+plot(1:10)
+unset multiplot;
+# Octave 3.6.4, Mon Jul 15 18:42:03 2013 IST <user@user-PC>
+export DISPLAY=:0.0
+quit
+# Octave 3.6.4, Mon Jul 15 18:47:47 2013 IST <user@user-PC>
+# Octave 3.6.4, Mon Jul 15 19:24:49 2013 IST <user@user-PC>
+plot(x)
+x = [1:10]
+plot(x)
+gnuplot
+# Octave 3.6.4, Mon Jul 15 19:55:18 2013 IST <user@user-PC>
+x = [1:10]
+plot(x)
+plot(x)
+setenv
+setenv GNUTERM x11
+plot(x)
+# Octave 3.6.4, Mon Jul 15 20:42:12 2013 IST <user@user-PC>
+plot(x*x))
+plot(x*x)
+x = [1:50]
+plot(x*x)
+plot(x**2)
+function 
+function sq = f(x)
+f
+f(x)=x*x
+endfunction
+x = [1:10]
+plot(x, f)
+function sq = f(x)
+f(x) = x*x
+endfunction
+plot(x, sq)
+plot(x, f)
+end
+quit
+# Octave 3.6.4, Mon Jul 15 23:41:24 2013 IST <user@user-PC>
+x = [1:10]
+function sq = f(x)
+f(x)=x*x
+endfunction
+plot(x,f)
+plot(x,sq)
+# Octave 3.6.4, Mon Jul 15 23:49:49 2013 IST <user@user-PC>
+doc
+# Octave 3.6.4, Tue Jul 16 16:05:36 2013 IST <user@user-PC>
+quit
+# Octave 3.6.4, Tue Jul 16 16:34:08 2013 IST <user@user-PC>
+x = [1:10]
+plot(x)
+plot(x)
+exit
+# Octave 3.6.4, Tue Jul 16 16:35:18 2013 IST <user@user-PC>
+x = [1:10]
+plot(x)
+gnuplot
+exit
+# Octave 3.6.4, Tue Jul 16 17:34:56 2013 IST <user@user-PC>
+plot(sin(x))
+x = [1:10]
+plot(x)
+exit
+# Octave 3.6.4, Tue Jul 16 17:40:48 2013 IST <user@user-PC>
+ls
+ls
+euler.m
+euler.m
+ls
+mit18086_navierstokes.m
+# Octave 3.6.4, Tue Oct 15 23:09:55 2013 IST <user@user-PC>

@@ -1,0 +1,24 @@
+Circuit: * C:\Users\user\Desktop\Cybernet Corp\Neural pulse circuit schematic-approx1.asc
+
+WARNING: Node P006 is floating.
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Wed Oct 09 00:32:26 2013
+Total elapsed time: 0.161 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2275
+traniter = 2272
+tranpoints = 1137
+accept = 1117
+rejected = 20
+matrix size = 10
+fillins = 0
+solver = Normal
+Matrix Compiler1: 418 bytes object code size  1.1/0.8/[0.5]
+Matrix Compiler2: 680 bytes object code size  0.7/1.2/[0.7]
+
+
